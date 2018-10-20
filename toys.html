@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="11.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body background="hm.jpg" >
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">The Saviour</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Home<span class="caret"></span></a>
+<ul class="dropdown-menu">
+      <li><a href="#">Donate</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Reviews</a></li>
+    </ul>
+</li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Get Involved</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+  
+    
+
+      <ul class="nav navbar-nav navbar-right">
+	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#" >Sign Up </a> 
+		<div class="dropdown-menu">
+            <form id="formLogin" class="form container-fluid">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+	      <div class="form-group">
+                <label for="usr">Email ID:</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pass">
+              </div>
+	      <div class="form-group">
+                <label for="pwd">Confirm Password:</label>
+                <input type="password" class="form-control" id="cpass">
+              </div>
+              <button type="button" id="btnLogin" class="btn btn-block">Sign Up</button>
+            </form>
+            <div class="container-fluid">
+              <br>
+              <a class="small" href="#"></a>
+            </div> 
+          </div>
+	</li>
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span></a>
+          <div class="dropdown-menu">
+            <form id="formLogin" class="form container-fluid">
+              <div class="form-group">
+                <label for="usr">Email ID:</label>
+                <input type="text" class="form-control" id="usr">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+              </div>
+              <button type="button" id="btnLogin" class="btn btn-block">Login</button>
+            </form>
+            <div class="container-fluid">
+              <br>
+              <a class="small" href="#">Forgot password?</a>
+            </div> 
+          </div>
+        </li>
+      </ul>
+  </div>
+  </div>
+</nav>
+
+</ul>
+  
+<div class="container">
+  <h3>Team Last Minute</h3><center><h1>Pick the items you want to donate</h1></center>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-6">
+         <a href="#"><img id="borderimg3" src="2.jpg" width="450" height="300" style="PADDING-LEFT: 15px; PADDING-RIGHT: 15px;"  title="Clothes" alt="Clothes"></a>
+        
+      </div>
+     <div class="col col-lg-6">
+     
+
+        <h3>Toys(For childerns)</h3><br><br>
+        <div class="form-group">
+          <div class="col-sm-4">
+       <img src="donate.gif" height="90%" width="100%">
+      </div>
+  </div>
+      
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="count" placeholder="count" name="count">
+        <input type="submit"  class="btn btn-default"></button></center>
+      </div>
+  </div>
+  
+  
+    </div>
+        
+      </div>
+      
+    </div>
+</div></div>
+
+</body>
+</html>
